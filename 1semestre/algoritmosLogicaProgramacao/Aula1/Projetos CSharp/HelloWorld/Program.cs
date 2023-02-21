@@ -1,6 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("*");
-Console.WriteLine("**");
-Console.WriteLine("***");
+﻿
+Console.WriteLine( " " );                                                               
+ Console.WriteLine("   _|      _|              _|      _|                                      ");
+ Console.WriteLine("  _|_|  _|_|    _|_|_|  _|_|_|_|  _|_|_|      _|_|    _|    _|    _|_|_|  ");
+ Console.WriteLine("  _|  _|  _|  _|    _|    _|      _|    _|  _|_|_|_|  _|    _|  _|_|      ");
+ Console.WriteLine("  _|      _|  _|    _|    _|      _|    _|  _|        _|    _|      _|_|  ");
+ Console.WriteLine("  _|      _|    _|_|_|      _|_|  _|    _|    _|_|_|    _|_|_|  _|_|_|    ");
 Console.ReadKey();
