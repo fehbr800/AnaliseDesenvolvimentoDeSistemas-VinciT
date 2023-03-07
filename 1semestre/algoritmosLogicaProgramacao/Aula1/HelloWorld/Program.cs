@@ -27,7 +27,7 @@ Console.ReadKey();
 */
 // Atividade valor da mesada para ir no rolê
 
-int mesada;
+double mesada;
 Console.WriteLine("Digite o valor da sua mesada: ");
 mesada = int.Parse(Console.ReadLine());
 
