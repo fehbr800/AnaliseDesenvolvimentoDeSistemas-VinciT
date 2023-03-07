@@ -29,7 +29,7 @@ Console.ReadKey();
 
 double mesada;
 Console.WriteLine("Digite o valor da sua mesada: ");
-mesada = int.Parse(Console.ReadLine());
+mesada = float.Parse(Console.ReadLine());
 
 if(mesada >= 200) {
     Console.WriteLine("Você tem grana pra balada :)");
