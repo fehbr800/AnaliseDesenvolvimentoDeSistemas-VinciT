@@ -40,11 +40,10 @@ for(contador = 0; contador <= 10; contador++){
 //Pesquisar ERP
 
 int opcao;
+TelaApresentacao();
 
-Console.WriteLine("Seja bem vindo ao sistema acadêmico!");
-Console.WriteLine("Versão 1.0!");
-Console.WriteLine("Desenvolvido pela Faculdade ViciT");
-Console.Beep();
+Console.ReadKey();
+Console.Clear();
 
 do
 {
@@ -53,6 +52,7 @@ do
     Console.WriteLine("1 - Cadastro de Alunos: ");
     Console.WriteLine("2 - Cadastro de Professores: ");
     Console.WriteLine("3 - Cadastro de Funcionarios: ");
+    Console.WriteLine("4 - Cadastro de Notas");
     Console.WriteLine("99 - Sair do Programa: ");
     opcao = int.Parse(Console.ReadLine());
 
@@ -78,10 +78,24 @@ do
         System.Console.WriteLine("Salário: ");
     }
 
+    if (opcao == 4)
+    {
+       
+         if ( CalculoMedia(7,7,7,7) >= 6.0)
+    {
+        Console.WriteLine("Parabens você foi aprovado!");
+    }
+    else
+    {
+        Console.WriteLine("Infelismente não deu parceiro");
+
+    }
+    }
+
 } while (opcao != 99);
 
 
-//Procedimento
+//Procedimento - sem retorno de valor
 static void CadastroAluno()
 {
 
@@ -119,6 +133,73 @@ static void CadastroAluno()
     System.Console.WriteLine("Nome da Mãe: ");
     nomeMae = Console.ReadLine();
 }
+
+static void TelaApresentacao()
+{
+    Console.Clear();
+    Console.BackgroundColor = ConsoleColor.DarkGreen;
+    Console.ForegroundColor = ConsoleColor.Blue;
+
+
+    Console.WriteLine("Seja bem vindo ao sistema acadêmico!");
+    Console.WriteLine("Versão 2.0!");
+    Console.WriteLine("Desenvolvido pela Faculdade ViciT");
+
+    Console.BackgroundColor = ConsoleColor.Black;
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.Beep();
+}
+
+
+//Função - Com passagem de parâmetro
+static float CalculoMedia(float n1,float n2, float n3,float n4)
+{
+
+    // Anual,, 4 Bimestres
+    //Logo são 4 notas
+    // Média para aprovação = 6,0
+
+    float media;
+    media = (n1 + n2 + n3 + n4) / 4;
+    return media;
+
+    /*Console.WriteLine("Digite a nota do 1° bimestre: ");
+    n1 = float.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite a nota do 2° bimestre: ");
+    n2 = float.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite a nota do 3° bimestre: ");
+    n3 = float.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite a nota do 4° bimestre: ");
+
+    n4 = float.Parse(Console.ReadLine());
+*/
+    
+
+    Console.WriteLine("Sua nota final é: ");
+    Console.WriteLine(media);
+
+
+
+    if (media >= 6.0)
+    {
+        Console.WriteLine("Parabens você foi aprovado!");
+    }
+    else
+    {
+        Console.WriteLine("Infelismente não deu parceiro");
+
+    }
+
+    Console.ReadKey();
+    Console.Clear();
+
+}
+
+//Função
+
 
 Console.ReadKey();
 
